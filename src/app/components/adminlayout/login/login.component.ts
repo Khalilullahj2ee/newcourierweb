@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.submitted = true;
+    console.log(this.formGroup.value);
+    
    this.loginService.login(this.formGroup.value)
    .subscribe(res => {
     this.storageService.saveLoginInfo(res.data);

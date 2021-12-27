@@ -7,6 +7,7 @@ import { AdminlayoutComponent } from './conponents/adminlayout/adminlayout.compo
 import { AdminheaderComponent } from './components/adminlayout/adminheader/adminheader.component';
 import { LoginComponent } from './components/adminlayout/login/login.component';
 import { DashboardComponent } from './components/adminlayout/dashboard/dashboard.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DashboardComponent } from './components/adminlayout/dashboard/dashboard
     AdminlayoutComponent,
     AdminheaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
