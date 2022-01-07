@@ -7,6 +7,9 @@ import { AdminlayoutComponent } from './conponents/adminlayout/adminlayout.compo
 import { AdminheaderComponent } from './components/adminlayout/adminheader/adminheader.component';
 import { LoginComponent } from './components/adminlayout/login/login.component';
 import { DashboardComponent } from './components/adminlayout/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './components/adminlayout/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,15 @@ import { DashboardComponent } from './components/adminlayout/dashboard/dashboard
     AdminlayoutComponent,
     AdminheaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
