@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/adminlayout/dashboard/dashboard
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/adminlayout/signup/signup.component';
+import { NeworderComponent } from './components/neworder/neworder.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SignupComponent } from './components/adminlayout/signup/signup.componen
     AdminheaderComponent,
     LoginComponent,
     DashboardComponent,
+    NeworderComponent,
  
   ],
   imports: [
