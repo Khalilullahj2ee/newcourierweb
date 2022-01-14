@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/adminlayout/dashboard/dashboard
 import { LoginComponent } from './components/adminlayout/login/login.component';
 import { SignupComponent } from './components/adminlayout/signup/signup.component';
 import { NeworderComponent } from './components/neworder/neworder.component';
+import { OrderlistComponent } from './components/neworder/orderlist/orderlist.component';
 import { AdminlayoutComponent } from './conponents/adminlayout/adminlayout.component';
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
     path: "admin", component: AdminlayoutComponent, children: [
       { path: "", component: DashboardComponent },
       { path: "order", component: NeworderComponent },
+      { path: "orderlist", component: OrderlistComponent},
     ]
   }
 ];

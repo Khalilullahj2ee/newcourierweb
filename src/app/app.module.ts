@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/adminlayout/signup/signup.component';
 import { NeworderComponent } from './components/neworder/neworder.component';
+import { OrderlistComponent } from './components/neworder/orderlist/orderlist.component';
+ 
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { NeworderComponent } from './components/neworder/neworder.component';
     LoginComponent,
     DashboardComponent,
     NeworderComponent,
+    OrderlistComponent,
+    SignupComponent
  
   ],
   imports: [
