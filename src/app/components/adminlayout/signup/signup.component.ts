@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+ fg = new FormGroup({
+  name: new FormControl("", Validators.required),
+  email: new FormControl("", Validators.required),
+  phone: new FormControl("", Validators.required),
+  password: new FormControl("", Validators.required),
+
+
+ })
+  constructor(  private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  signUp(){
+    console.log(this.fg.value);
+    const header = { 'Content-Type': 'application/json' };
+
+    if (this.fg.valid) {
+      this.http.post("http://localhost:9091/user_sav", JSON.stringify(this.fg.value), { headers: header }).subscribe(res => {
+        console.log(res);
+
+      })
+    } else {
+      console.log("invalid form");
+    }
+    
   }
 
 }
