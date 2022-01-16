@@ -1,0 +1,52 @@
+<section style="background-image:url('assets/dist/img/trakig.jpg'); height: auto;">
+<div class="container justify-content-center">
+   
+    <h1 style="color: brown; background-color: cadetblue; text-align: center;">Order Track</h1>
+   
+    <div class="row justify-content-center">
+       
+
+        <div class="col-md-6">
+
+            <div class="input-group mb-3 ">
+                <input name="trackingNum" id="trackingNum" [(ngModel)]="trackingNum" type="text" class="form-control"
+                    placeholder="Tracking Number" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <button (click)="searchByTrackingNumber()" class="btn btn-primary " id="basic-addon2">Search</button>
+            </div>
+            <!-- <button (click) = "searchByTrackingNumber()">Search</button>-->
+            <table class="table table-hover table-striped table-bordered border-primary">
+
+                <tbody>
+                    <tr>
+                        <th>Delivary Date</th>
+                        <td>{{order.orderDate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Tracking Number</th>
+                        <td>{{order.trackingNum}}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{order.receiveName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>{{order.receiverPhon}}</td>
+                    </tr>
+                    <tr>
+                        <th>Contents</th>
+                        <td>{{order.contents}}</td>
+                    </tr>
+                    <tr>
+                        <th>Delivary Status</th>
+                        <th style="color: green;">{{order.status}}</th>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+     
+</div>
+</section>

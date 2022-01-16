@@ -1,5 +1,7 @@
-<h1 style="color: brown;">Order Details</h1>
-<form [formGroup]="fg" (ngSubmit)= "save()">
+<section style="background-image:url('assets/dist/img/trakig.jpg'); height: auto;">
+
+<h1 style="color: brown; background-color: cadetblue; text-align: center;">Order Details</h1>
+<form [formGroup]="fg" (ngSubmit)="save()">
     <div class="row p-5">
 
         <div class="col-md-6">
@@ -14,49 +16,57 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Traking Number</label>
-                        <input type="text" class="form-control" id="trackingNum" name="trackingNum" formControlName="trackingNum" placeholder="Enter Traking Number">
+                        <input type="text" class="form-control" id="trackingNum" name="trackingNum"
+                            formControlName="trackingNum" placeholder="Enter Traking Number">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Name</label>
-                        <input type="text" class="form-control" id="senderName" name="senderName" formControlName="senderName"  placeholder="Enter Your Name">
+                        <input type="text" class="form-control" id="senderName" name="senderName"
+                            formControlName="senderName" placeholder="Enter Your Name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Email</label>
-                        <input type="email" class="form-control" id="senderEmail" name="senderEmail" formControlName="senderEmail"  placeholder="Enter Email">
+                        <input type="email" class="form-control" id="senderEmail" name="senderEmail"
+                            formControlName="senderEmail" placeholder="Enter Email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phone Number</label>
-                        <input type="text" class="form-control" id="senderPhone" name="senderPhone" formControlName="senderPhone"  placeholder="Enter Your Phone Number">
+                        <input type="text" class="form-control" id="senderPhone" name="senderPhone"
+                            formControlName="senderPhone" placeholder="Enter Your Phone Number">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Address</label>
-                    <textarea class="form-control" rows="3" placeholder="Enter ..." name="senderAddress" formControlName="senderAddress" ></textarea> 
-                    </div> 
+                        <textarea class="form-control" rows="3" placeholder="Enter ..." name="senderAddress"
+                            formControlName="senderAddress"></textarea>
+                    </div>
                     <div class="form-group">
                         <label>Document Type</label>
-                        <select class="form-control" name="docType" formControlName="docType" >
-                          <option value="-1">Select Option</option>
-                          <option value="document">Document</option>
-                          <option value="non-document">Non Document</option> 
+                        <select class="form-control" name="docType" formControlName="docType">
+                            <option value="-1">Select Option</option>
+                            <option value="document">Document</option>
+                            <option value="non-document">Non Document</option>
                         </select>
-                      </div>
-                      <div class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputPassword1">Contants</label>
-                        <input type="text" class="form-control" id="contents" name="contents" formControlName="contents"  placeholder="Whats kinds of your order">
+                        <input type="text" class="form-control" id="contents" name="contents" formControlName="contents"
+                            placeholder="Whats kinds of your order">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">weight</label>
-                        <input type="text" class="form-control" id="weight" name="weight" formControlName="weight"  placeholder="How Match weight">
+                        <input type="text" class="form-control" id="weight" name="weight" formControlName="weight"
+                            placeholder="How Match weight">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Quantity</label>
-                        <input type="text" class="form-control" id="quantity" name="quantity" formControlName="quantity" > 
+                        <input type="text" class="form-control" id="quantity" name="quantity"
+                            formControlName="quantity">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Amount</label>
-                        <input type="text" class="form-control" id="amount" name="amount" formControlName="amount" >
+                        <input type="text" class="form-control" id="amount" name="amount" formControlName="amount">
                     </div>
-                    
+
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -78,53 +88,59 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Order Date</label>
-                        <input type="date" class="form-control" id="orderDate" name="orderDate" formControlName="orderDate"  placeholder="dd/mm/yy">
+                        <input type="date" class="form-control" id="orderDate" name="orderDate"
+                            formControlName="orderDate" placeholder="dd/mm/yy">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Name</label>
-                        <input type="text" class="form-control" id="receiveName" name="receiveName" formControlName="receiveName" placeholder="Enter Your Name">
+                        <input type="text" class="form-control" id="receiveName" name="receiveName"
+                            formControlName="receiveName" placeholder="Enter Your Name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Email</label>
-                        <input type="email" class="form-control" id="receiveEmail" name="receiveEmail" formControlName="receiveEmail"  placeholder="Enter Email">
+                        <input type="email" class="form-control" id="receiveEmail" name="receiveEmail"
+                            formControlName="receiveEmail" placeholder="Enter Email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phone Number</label>
-                        <input type="text" class="form-control" id="receiverPhon" name="receiverPhon" formControlName="receiverPhon"  placeholder="Enter Your Phone Number">
+                        <input type="text" class="form-control" id="receiverPhon" name="receiverPhon"
+                            formControlName="receiverPhon" placeholder="Enter Your Phone Number">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Address</label>
-                    <textarea class="form-control" rows="3" id="receiverAddress" name="receiverAddress" formControlName="receiverAddress" placeholder="Enter ..."></textarea> 
-                    </div> 
+                        <textarea class="form-control" rows="3" id="receiverAddress" name="receiverAddress"
+                            formControlName="receiverAddress" placeholder="Enter ..."></textarea>
+                    </div>
                     <div class="form-group">
                         <label>Statuse</label>
                         <select class="form-control" id="status" name="status" formControlName="status">
-                          <option>Select Option</option>
-                          <option>Picked up</option>
-                          <option>Pending</option> 
-                          <option>On Hold</option> 
-                          <option>Out For Delivary</option> 
-                          <option>In Transit</option> 
-                          <option>Enroute</option> 
-                          <option>Cancled</option> 
-                          <option>Delivered</option> 
-                          <option>Returened</option> 
+                            <option>Select Option</option>
+                            <option>Picked up</option>
+                            <option>Pending</option>
+                            <option>On Hold</option>
+                            <option>Out For Delivary</option>
+                            <option>In Transit</option>
+                            <option>Enroute</option>
+                            <option>Cancled</option>
+                            <option>Delivered</option>
+                            <option>Returened</option>
                         </select>
-                      </div>
+                    </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                 </div>
 
-                
+
 
             </div>
             <div class="float-right mr-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-            <a routerLink="/admin/orderlist" class="btn btn-info">Orderlist</a> 
+            <a routerLink="/admin/orderlist" class="btn btn-info">Orderlist</a>
         </div>
 
-    </div> 
+    </div>
 </form>
+</section>

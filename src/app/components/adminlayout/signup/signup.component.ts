@@ -11,6 +11,7 @@ export class SignupComponent implements OnInit {
 
  fg = new FormGroup({
   name: new FormControl("", Validators.required),
+  username: new FormControl("", Validators.required),
   email: new FormControl("", Validators.required),
   phone: new FormControl("", Validators.required),
   password: new FormControl("", Validators.required),
@@ -27,7 +28,7 @@ export class SignupComponent implements OnInit {
     const header = { 'Content-Type': 'application/json' };
 
     if (this.fg.valid) {
-      this.http.post("http://localhost:9091/user_sav", JSON.stringify(this.fg.value), { headers: header }).subscribe(res => {
+      this.http.post("http://localhost:9091/user_save", JSON.stringify(this.fg.value), { headers: header }).subscribe(res => {
         console.log(res);
 
       })

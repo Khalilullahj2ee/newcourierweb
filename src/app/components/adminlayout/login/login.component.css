@@ -6,7 +6,7 @@ body {
 
 .main-head{
     height: 150px;
-    background: #FFF;
+    
    
 }
 
@@ -28,11 +28,11 @@ body {
 
 @media screen and (max-width: 450px) {
     .login-form{
-        margin-top: 10%;
+        margin-top: 100%;
     }
 
     .register-form{
-        margin-top: 10%;
+        margin-top: 100%;
     }
 }
 
@@ -43,7 +43,7 @@ body {
 
     .sidenav{
         width: 40%;
-        position: fixed;
+        position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
@@ -62,7 +62,7 @@ body {
 .login-main-text{
     margin-top: 20%;
     padding: 60px;
-    color: #fff;
+    
 }
 
 .login-main-text h2{
@@ -71,5 +71,5 @@ body {
 
 .btn-black{
     background-color: rgb(34, 139, 34) !important;
-    color: #fff;
+   
 }

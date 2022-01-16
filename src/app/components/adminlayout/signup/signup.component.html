@@ -7,11 +7,21 @@
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Create an account</h2>
   
-                <form style="background-color: cadetblue;" (ngSubmit)= "signUp()">
+                <form [formGroup]="fg" (ngSubmit)= "signUp()">
   
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example1cg">Your Name</label> 
                     <input type="text" id="name" name="name" formControlName="name" class="form-control form-control-lg" />
+                  </div>
+                  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Username</label> 
+                    <input type="text" id="username" name="username" formControlName="username" class="form-control form-control-lg" />
+                     
+                      <div class="error text-danger">
+                          Username is mandatory.
+                      </div>
+                
                   </div>
   
                   <div class="form-outline mb-4">
@@ -28,6 +38,9 @@
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label> 
                     <input type="password" id="password" name="password" formControlName="password"  class="form-control form-control-lg" />
+                    <div class="error text-danger">
+                      password is mandatory.
+                  </div>
                   </div>
   
                   

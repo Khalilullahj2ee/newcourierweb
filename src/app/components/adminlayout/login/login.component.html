@@ -4,27 +4,45 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="sidenav">
-         <div class="login-main-text">
-            <h2>Application<br> Login Page</h2>
-            <p>Login or register from here to access.</p>
-         </div>
-      </div>
-      <div class="main">
-         <div class="col-md-6 col-sm-12">
-            <div class="login-form">
-               <form [formGroup]="formGroup" (ngSubmit)= "onSubmit()">
-                  <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" formControlName="username"  name="username" placeholder="User Name">
+   <div class="login-main-text">
+      <h2>Application<br> Login Page</h2>
+      <p>Login or register from here to access.</p>
+   </div>
+</div>
+<div class="main">
+   <section style="background-image:url('assets/dist/img/bg_image/sign_cover.jpg');">
+
+
+   <div class="col-md-6 col-sm-12">
+      <div class="login-form" >
+
+         <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+               <label>User Name</label>
+               <input type="text" class="form-control" formControlName="username" name="username"
+                  placeholder="User Name">
+               <div *ngIf="submitted && f['username'].errors">
+                  <div class="error text-danger">
+                     Username is mandatory.
                   </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" name="password" formControlName="password"  placeholder="Password">
-                  </div> 
-                  <button type="submit" class="btn btn-black" >Login</button>
-                  <a routerLink="/sign" class="btn btn-secondary">Register</a>
-               </form>
+               </div>
             </div>
-         </div>
+            <div class="form-group">
+               <label>Password</label>
+               <input type="password" class="form-control" name="password" formControlName="password"
+                  placeholder="Password">
+               <div *ngIf="submitted && f['password'].errors">
+                  <div class="error text-danger">
+                     Password is mandatory.
+                  </div>
+
+               </div>
+            </div>
+            <button type="submit" class="btn btn-black">Login</button>
+            <a routerLink="/sign" class="btn btn-secondary">Register</a>
+         </form>
+     
       </div>
-       
+   </div>
+</section>
+</div>

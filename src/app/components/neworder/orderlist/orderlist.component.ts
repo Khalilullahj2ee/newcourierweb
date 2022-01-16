@@ -16,6 +16,7 @@ export class OrderlistComponent implements OnInit {
   order: orderModel = new orderModel()
 
 
+
   ngOnInit(): void {
     this.getOrders()
   }
@@ -32,25 +33,44 @@ export class OrderlistComponent implements OnInit {
 
 
   editOrder(ords:any){
+    this.order = ords
     //this.order = ords.trackingNum
-    this.order.senderName = ords.senderName
-    this.order.senderEmail = ords.senderEmail
-    this.order.senderPhone = ords.senderPhone
-    this.order.senderAddress = ords.senderAddress
-    this.order.docType = ords.docType
-    this.order.contents = ords.contents
-    this.order.weight = ords.weight
-    this.order.amount = ords.amount
-    this.order.receiveName = ords.receiveName
-    this.order.receiveEmail = ords.receiveEmail
-    this.order.receiverPhon = ords.receiverPhon
-    this.order.receiverAddress = ords.receiverAddress
-    this.order.status = ords.status
-    this.order.orderDate = ords.orderDate 
-    console.log(this.order);
+    // this.order.senderName = ords.senderName
+    // this.order.senderEmail = ords.senderEmail
+    // this.order.senderPhone = ords.senderPhone
+    // this.order.senderAddress = ords.senderAddress
+    // this.order.docType = ords.docType
+    // this.order.contents = ords.contents
+    // this.order.weight = ords.weight
+    // this.order.amount = ords.amount
+    // this.order.receiveName = ords.receiveName
+    // this.order.receiveEmail = ords.receiveEmail
+    // this.order.receiverPhon = ords.receiverPhon
+    // this.order.receiverAddress = ords.receiverAddress
+    // this.order.status = ords.status
+    // this.order.orderDate = ords.orderDate 
+    // console.log(this.order);
 
-    this.router.navigate(["/admin/order"], {state:{ords: orderModel, isSave: false}})
+    // this.router.navigate(["/admin/order"], {state:{ords: orderModel, isSave: false}})
     
 
+
   }
+  header = { 'Content-Type': 'application/json' };
+  updateStatus(){  
+
+    this.http.post("http://localhost:9091/order", JSON.stringify(this.order), { headers: this.header }).subscribe(res => {
+      console.log(res);
+
+    })
+  }
+
+  delete(id:string){
+    this.http.post("http://localhost:9091/order/delete/"+id, JSON.stringify(this.order), { headers: this.header }).subscribe(res => {
+      console.log(res);
+      this.getOrders()
+
+    })
+  }
+
 }

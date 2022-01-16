@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/adminlayout/signup/signup.component';
 import { NeworderComponent } from './components/neworder/neworder.component';
 import { OrderlistComponent } from './components/neworder/orderlist/orderlist.component';
+import { OrderTrackingComponent } from './components/order-tracking/order-tracking.component';
  
 
 @NgModule({
@@ -23,7 +24,8 @@ import { OrderlistComponent } from './components/neworder/orderlist/orderlist.co
     DashboardComponent,
     NeworderComponent,
     OrderlistComponent,
-    SignupComponent
+    SignupComponent,
+    OrderTrackingComponent
  
   ],
   imports: [

@@ -46,6 +46,7 @@ export class NeworderComponent implements OnInit {
     if (this.fg.valid) {
       this.http.post("http://localhost:9091/order", JSON.stringify(this.fg.value), { headers: header }).subscribe(res => {
         console.log(res);
+        alert("Order Submited Succesfully!")
 
       })
     } else {
