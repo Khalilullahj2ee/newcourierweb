@@ -13,6 +13,7 @@ const routes: Routes = [
    
 
   { path: "", component: LoginComponent },
+  { path: "orderTrack", component: OrderTrackingComponent},
   { path: "sign", component: SignupComponent },
   {
     path: "admin", component: AdminlayoutComponent, children: [
