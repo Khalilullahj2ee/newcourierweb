@@ -15,7 +15,7 @@
 
    <div class="col-md-6 col-sm-12">
       <div class="login-form" >
-
+         <a routerLink="/orderTrack" class="btn btn-secondary">Track Order</a>
          <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
             <div class="form-group">
                <label>User Name</label>
@@ -43,8 +43,6 @@
          </form>
      
       </div>
-   </div>
-   <a routerLink="/orderTrack" class="btn btn-secondary">Track Order</a>
-
+   </div> 
 </section>
 </div>

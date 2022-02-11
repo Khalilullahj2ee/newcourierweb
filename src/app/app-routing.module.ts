@@ -7,12 +7,15 @@ import { NeworderComponent } from './components/neworder/neworder.component';
 import { OrderlistComponent } from './components/neworder/orderlist/orderlist.component';
 import { OrderTrackingComponent } from './components/order-tracking/order-tracking.component';
 import { AdminlayoutComponent } from './conponents/adminlayout/adminlayout.component';
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
+import { HomeComponent } from './user/home/home.component';
 
 
 const routes: Routes = [
    
-
-  { path: "", component: LoginComponent },
+  //{ path: "", component: UserInterfaceComponent },
+  { path: "", component:HomeComponent },
+  { path: "login", component: LoginComponent },
   { path: "orderTrack", component: OrderTrackingComponent},
   { path: "sign", component: SignupComponent },
   {

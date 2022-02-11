@@ -13,6 +13,8 @@ import { SignupComponent } from './components/adminlayout/signup/signup.componen
 import { NeworderComponent } from './components/neworder/neworder.component';
 import { OrderlistComponent } from './components/neworder/orderlist/orderlist.component';
 import { OrderTrackingComponent } from './components/order-tracking/order-tracking.component';
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
+import { HomeComponent } from './user/home/home.component';
  
 
 @NgModule({
@@ -25,7 +27,9 @@ import { OrderTrackingComponent } from './components/order-tracking/order-tracki
     NeworderComponent,
     OrderlistComponent,
     SignupComponent,
-    OrderTrackingComponent
+    OrderTrackingComponent,
+    UserInterfaceComponent,
+    HomeComponent
  
   ],
   imports: [
