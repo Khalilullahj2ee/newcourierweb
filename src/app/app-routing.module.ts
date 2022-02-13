@@ -14,12 +14,21 @@ import { HomeComponent } from './user/home/home.component';
 const routes: Routes = [
    
   //{ path: "", component: UserInterfaceComponent },
-  { path: "", component:HomeComponent },
-  { path: "login", component: LoginComponent },
-  { path: "orderTrack", component: OrderTrackingComponent},
-  { path: "sign", component: SignupComponent },
+  // { path: "", component:HomeComponent },
+  // { path: "login", component: LoginComponent },
+  // { path: "orderTrack", component: OrderTrackingComponent},
+  // { path: "sign", component: SignupComponent },
+
+  {
+    path: "", component:  HomeComponent, children: [ 
+      { path: "", component: UserInterfaceComponent},
+      { path: "orderTrack", component: OrderTrackingComponent},
+    ]
+  },
+
   {
     path: "admin", component: AdminlayoutComponent, children: [
+      //{ path: "", component: LoginComponent },
       { path: "", component: DashboardComponent },
       { path: "order", component: NeworderComponent },
       { path: "orderlist", component: OrderlistComponent},
