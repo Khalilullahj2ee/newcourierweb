@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-adminheader',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private storageService: StorageService,
+    private rout: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  logout() {
+    console.log('loging out');
+
+    this.storageService.logout();
+    this.rout.navigateByUrl('/')
+  }
 }

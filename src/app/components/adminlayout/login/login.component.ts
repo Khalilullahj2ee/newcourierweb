@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     var isLoggedIn = this.storageService.isLoggedIn();
-    if(isLoggedIn) this.route.navigate(['']);
+    if(isLoggedIn) this.route.navigate(['/admin']);
   }
 
   get f(){
@@ -39,10 +39,10 @@ export class LoginComponent implements OnInit {
    this.loginService.login(this.formGroup.value)
    .subscribe(res => {
     this.storageService.saveLoginInfo(res.data);
-    this.route.navigate(['admin']);
+    this.route.navigate(['/admin']);
    }, err => {
      console.log(err);
-     this.route.navigate(['']);
+     this.route.navigate(['/adminlogin']);
    })
   }
 }

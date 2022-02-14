@@ -25,10 +25,10 @@ const routes: Routes = [
       { path: "orderTrack", component: OrderTrackingComponent},
     ]
   },
-
+  { path: "adminlogin", component: LoginComponent },
   {
-    path: "admin", component: AdminlayoutComponent, children: [
-      //{ path: "", component: LoginComponent },
+    path: "admin", component: AdminlayoutComponent,  children: [
+     
       { path: "", component: DashboardComponent },
       { path: "order", component: NeworderComponent },
       { path: "orderlist", component: OrderlistComponent},
